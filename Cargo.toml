@@ -11,7 +11,7 @@ documentation = "https://docs.rs/docx-templater"
 readme = "README.md"
 keywords = ["docx", "template", "word", "pptx", "docxtemplater"]
 categories = ["template-engine", "text-processing", "encoding"]
-exclude = ["tests/fixtures/", ".github/"]
+exclude = ["tests/", ".github/", "rustfmt.toml"]
 
 [dependencies]
 serde = "1.0.229"
