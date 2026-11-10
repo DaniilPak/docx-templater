@@ -1,0 +1,22 @@
+[package]
+name = "docx-templater"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
+authors = ["DaniilPak"]
+description = "Fill .docx and .pptx templates with JSON / serde data using docxtemplater's tag syntax ({name}, {#loop}, {^inverted}, {@raw}); robust to tags split across Word runs."
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/DaniilPak/docx-templater"
+documentation = "https://docs.rs/docx-templater"
+readme = "README.md"
+keywords = ["docx", "template", "word", "pptx", "docxtemplater"]
+categories = ["template-engine", "text-processing", "encoding"]
+exclude = ["tests/fixtures/", ".github/"]
+
+[dependencies]
+serde = "1.0.229"
+serde_json = "1.0.154"
+zip = { version = "9.5.0", default-features = false, features = ["deflate"] }
+
+[dev-dependencies]
+serde = { version = "1", features = ["derive"] }

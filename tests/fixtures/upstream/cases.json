@@ -1,0 +1,965 @@
+[
+ {
+  "name": "tag-example.docx",
+  "expected": "expected-tag-example.docx",
+  "data": {
+   "first_name": "Hipp",
+   "last_name": "Edgar",
+   "phone": "0652455478",
+   "description": "New Website"
+  },
+  "texts": {
+   "word/document.xml": "Edgar Hipp",
+   "word/header1.xml": "Edgar Hipp0652455478New Website",
+   "word/footer1.xml": "EdgarHipp0652455478"
+  }
+ },
+ {
+  "name": "tag-docprops.docx",
+  "expected": "expected-tag-docprops.docx",
+  "data": {
+   "first_name": "Hipp",
+   "last_name": "Edgar",
+   "phone": "0652455478",
+   "description": "New Website"
+  },
+  "texts": {
+   "docProps/app.xml": "TitleName: Hipp"
+  }
+ },
+ {
+  "name": "users.docx",
+  "expected": "expected-users.docx",
+  "data": {
+   "users": [
+    "John",
+    "Jane",
+    "Louis"
+   ]
+  },
+  "options": {
+   "paragraph_loop": true
+  }
+ },
+ {
+  "name": "cond-image.docx",
+  "expected": "expected-cond-image.docx",
+  "data": {
+   "cond": true
+  },
+  "options": {
+   "paragraph_loop": true
+  }
+ },
+ {
+  "name": "cond-image-no-innertext.docx",
+  "expected": "expected-cond-image-no-innertext.docx",
+  "data": {
+   "cond": true
+  },
+  "options": {
+   "paragraph_loop": true
+  }
+ },
+ {
+  "name": "cond-image-no-innertext-before.docx",
+  "expected": "expected-cond-image-no-innertext-before.docx",
+  "data": {
+   "cond": true
+  },
+  "options": {
+   "paragraph_loop": true
+  }
+ },
+ {
+  "name": "paragraph-loops.docx",
+  "expected": "expected-paragraph-loop.docx",
+  "data": {
+   "condition": [
+    1,
+    2
+   ],
+   "l1": [
+    {
+     "l2": [
+      "a",
+      "b",
+      "c"
+     ]
+    },
+    {
+     "l2": [
+      "d",
+      "e",
+      "f"
+     ]
+    }
+   ],
+   "placeholder": "placeholder-value"
+  },
+  "options": {
+   "paragraph_loop": true
+  }
+ },
+ {
+  "name": "paragraph-loop.pptx",
+  "expected": "expected-paragraph-loop.pptx",
+  "data": {
+   "users": [
+    {
+     "age": 10,
+     "name": "Bar"
+    },
+    {
+     "age": 18,
+     "name": "Bar"
+    },
+    {
+     "age": 22,
+     "name": "Bar"
+    }
+   ]
+  },
+  "options": {
+   "paragraph_loop": true
+  }
+ },
+ {
+  "name": "tag-intelligent-loop-table.docx",
+  "expected": "expected-tag-intelligent-loop-table.docx",
+  "data": {
+   "clients": [
+    {
+     "first_name": "John",
+     "last_name": "Doe",
+     "phone": "+33647874513"
+    },
+    {
+     "first_name": "Jane",
+     "last_name": "Doe",
+     "phone": "+33454540124"
+    },
+    {
+     "first_name": "Phil",
+     "last_name": "Kiel",
+     "phone": "+44578451245"
+    },
+    {
+     "first_name": "Dave",
+     "last_name": "Sto",
+     "phone": "+44548787984"
+    }
+   ]
+  },
+  "texts": {
+   "word/document.xml": "JohnDoe+33647874513JaneDoe+33454540124PhilKiel+44578451245DaveSto+44548787984"
+  }
+ },
+ {
+  "name": "loop-valid.docx",
+  "expected": "expected-loop-valid.docx",
+  "data": {
+   "a": [
+    {
+     "b": {
+      "c": "Foo",
+      "d": "Hello "
+     }
+    },
+    {
+     "b": {
+      "c": "Foo",
+      "d": "Hello "
+     }
+    }
+   ]
+  },
+  "options": {
+   "paragraph_loop": true
+  }
+ },
+ {
+  "name": "table-raw-xml.docx",
+  "expected": "expected-raw-xml.docx",
+  "data": {}
+ },
+ {
+  "name": "raw-xml-after-table.docx",
+  "expected": "expected-raw-xml-after-table.docx",
+  "data": {}
+ },
+ {
+  "name": "tag-multiline.docx",
+  "expected": "expected-multiline.docx",
+  "data": {
+   "description": "The description,\nmultiline"
+  },
+  "options": {
+   "linebreaks": true
+  }
+ },
+ {
+  "name": "tag-multiline.pptx",
+  "expected": "expected-multiline.pptx",
+  "data": {
+   "description": "The description,\nmultiline"
+  },
+  "options": {
+   "linebreaks": true
+  }
+ },
+ {
+  "name": "tag-multiline.pptx",
+  "expected": "expected-regression-multiline.pptx",
+  "data": {
+   "description": true
+  },
+  "options": {
+   "linebreaks": true
+  }
+ },
+ {
+  "name": "multi-tags.docx",
+  "expected": "expected-two-multiline.docx",
+  "data": {
+   "test": "The tag1,\nmultiline\nfoobaz",
+   "test2": "The tag2,\nmultiline\nfoobar"
+  },
+  "options": {
+   "linebreaks": true
+  }
+ },
+ {
+  "name": "run-props-linebreak.pptx",
+  "expected": "expected-run-props-linebreak.pptx",
+  "data": {
+   "data": "blabla\nbloblo\nblublu"
+  },
+  "options": {
+   "linebreaks": true
+  }
+ },
+ {
+  "name": "loop-with-section-break-after.docx",
+  "expected": "expected-loop-with-section-break-after.docx",
+  "data": {},
+  "options": {
+   "paragraph_loop": true
+  }
+ },
+ {
+  "name": "paragraph-loop-with-section-break-after.docx",
+  "expected": "expected-paragraph-loop-kept-section.docx",
+  "data": {},
+  "options": {
+   "paragraph_loop": true,
+   "linebreaks": true
+  }
+ },
+ {
+  "name": "page-break-inside-condition.docx",
+  "expected": "expected-with-page-break-3-els.docx",
+  "data": {
+   "cond": [
+    1,
+    2,
+    3
+   ]
+  },
+  "options": {
+   "paragraph_loop": true
+  }
+ },
+ {
+  "name": "page-break-inside-condition.docx",
+  "expected": "expected-with-page-break-falsy.docx",
+  "data": {
+   "cond": false
+  },
+  "options": {
+   "paragraph_loop": true
+  }
+ },
+ {
+  "name": "page-break-inside-condition.docx",
+  "expected": "expected-page-break-falsy-std-loop.docx",
+  "data": {
+   "cond": false
+  }
+ },
+ {
+  "name": "page-break-inside-condition.docx",
+  "expected": "expected-page-break-3-els-std-loop.docx",
+  "data": {
+   "cond": [
+    1,
+    2,
+    3
+   ]
+  }
+ },
+ {
+  "name": "page-break-inside-condition.docx",
+  "expected": "expected-page-break-truthy-std-loop.docx",
+  "data": {
+   "cond": true
+  }
+ },
+ {
+  "name": "pagebreak-table-loop.docx",
+  "expected": "expected-pagebreak-table-loop.docx",
+  "data": {
+   "loop": [
+    1,
+    2,
+    3
+   ]
+  },
+  "options": {
+   "paragraph_loop": true
+  }
+ },
+ {
+  "name": "paragraph-loop-with-pagebreak.docx",
+  "expected": "expected-noparagraph-loop-with-pagebreak.docx",
+  "data": {
+   "users": [
+    {
+     "name": "Bar"
+    },
+    {
+     "name": "John"
+    },
+    {
+     "name": "Baz"
+    }
+   ]
+  }
+ },
+ {
+  "name": "paragraph-loop-with-pagebreak.docx",
+  "expected": "expected-paragraph-loop-with-pagebreak.docx",
+  "data": {
+   "users": [
+    {
+     "name": "Bar"
+    },
+    {
+     "name": "John"
+    },
+    {
+     "name": "Baz"
+    }
+   ]
+  },
+  "options": {
+   "paragraph_loop": true
+  }
+ },
+ {
+  "name": "paragraph-loop-with-pagebreak.docx",
+  "expected": "expected-paragraph-loop-empty-with-pagebreak.docx",
+  "data": {
+   "users": false
+  },
+  "options": {
+   "paragraph_loop": true
+  }
+ },
+ {
+  "name": "loop-with-section.docx",
+  "expected": "expected-multi-section.docx",
+  "data": {
+   "loop1": [
+    {
+     "loop2": [
+      1,
+      2
+     ]
+    },
+    {
+     "loop2": []
+    },
+    {
+     "loop2": [
+      3,
+      4,
+      5
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "loop-with-page-section-break.docx",
+  "expected": "expected-page-section-break.docx",
+  "data": {
+   "loop": [
+    1,
+    2,
+    3
+   ]
+  }
+ },
+ {
+  "name": "nextpage-section-break.docx",
+  "expected": "expected-nextpage-section-break.docx",
+  "data": {
+   "items": [
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  "options": {
+   "paragraph_loop": true
+  }
+ },
+ {
+  "name": "regression-sdtcontent-paragraph.docx",
+  "expected": "expected-sdtcontent-valid.docx",
+  "data": {
+   "loop": {
+    "name": "foo",
+    "Id": "bar"
+   }
+  },
+  "options": {
+   "strict_parser": true
+  }
+ },
+ {
+  "name": "loops-with-table-raw-xml.docx",
+  "expected": "expected-loop-raw-xml.docx",
+  "data": {
+   "loop": [
+    {
+     "loop2": []
+    },
+    {
+     "loop2": {},
+     "raw": "<w:p><w:r><w:t>RAW</w:t></w:r></w:p>"
+    }
+   ]
+  },
+  "options": {
+   "paragraph_loop": true
+  }
+ },
+ {
+  "name": "self-closing-w-sdtcontent.docx",
+  "expected": "expected-self-closing-w-sdtcontent.docx",
+  "data": {}
+ },
+ {
+  "name": "table-in-table-corruption.docx",
+  "expected": "expected-table-in-table-corruption.docx",
+  "data": {},
+  "options": {
+   "paragraph_loop": true
+  }
+ },
+ {
+  "name": "table-empty.docx",
+  "expected": "expected-table-empty.docx",
+  "data": {}
+ },
+ {
+  "name": "header-without-digit.docx",
+  "expected": "expected-header-without-digit.docx",
+  "data": {
+   "name": "John"
+  }
+ },
+ {
+  "name": "empty-loop-regression.docx",
+  "expected": "expected-loop-regression.docx",
+  "data": {
+   "ice": [
+    1,
+    2,
+    3
+   ]
+  }
+ },
+ {
+  "name": "regression-complex-loops.docx",
+  "expected": "expected-regression-complex-loops.docx",
+  "data": {
+   "a": [
+    {
+     "d": "Hello world"
+    }
+   ]
+  }
+ },
+ {
+  "name": "with-default-contenttype.docx",
+  "expected": "expected-with-default-contenttype.docx",
+  "data": {}
+ },
+ {
+  "name": "smart-art.docx",
+  "expected": "expected-smart-art.docx",
+  "data": {
+   "name": "Jack",
+   "user": "John",
+   "i": 33,
+   "j": "J"
+  }
+ },
+ {
+  "name": "smart-art.pptx",
+  "expected": "expected-smart-art.pptx",
+  "data": {
+   "user": "John",
+   "i": 33,
+   "j": "J"
+  }
+ },
+ {
+  "name": "spacing-end.docx",
+  "expected": "expected-spacing-end.docx",
+  "data": {
+   "name": "John"
+  },
+  "options": {
+   "paragraph_loop": true
+  }
+ },
+ {
+  "name": "loop-hebrew.docx",
+  "expected": "expected-loop-hebrew.docx",
+  "data": {
+   "title": "Default title",
+   "products": [
+    {
+     "title": "Duk",
+     "name": "DukSoftware",
+     "reference": "DS0"
+    },
+    {
+     "title": "Tingerloo",
+     "name": "Tingerlee",
+     "reference": "T00"
+    },
+    {
+     "title": "Tingerloo",
+     "name": "Tingerlee",
+     "reference": "T00"
+    },
+    {
+     "title": "Tingerloo",
+     "name": "Tingerlee",
+     "reference": "T00"
+    }
+   ]
+  }
+ },
+ {
+  "name": "sdt-content.docx",
+  "expected": "expected-sdt-content.docx",
+  "data": {}
+ },
+ {
+  "name": "tag-with-comment.docx",
+  "expected": "expected-tag-with-comment.docx",
+  "data": {}
+ },
+ {
+  "name": "with-comments.docx",
+  "expected": "expected-comments.docx",
+  "data": {
+   "name": "John"
+  }
+ },
+ {
+  "name": "tab-character.pptx",
+  "expected": "expected-tab-character.pptx",
+  "data": {}
+ },
+ {
+  "name": "table-unbalanced-loop.docx",
+  "expected": "expected-table-unbalanced-loop.docx",
+  "data": {
+   "a": [
+    1,
+    2,
+    3
+   ],
+   "b": [
+    1,
+    2,
+    3
+   ],
+   "c": [
+    1,
+    2,
+    3
+   ]
+  },
+  "options": {
+   "allow_unbalanced_loops": true
+  }
+ },
+ {
+  "name": "input.docm",
+  "expected": "expected-docm.docm",
+  "data": {
+   "user": "John"
+  }
+ },
+ {
+  "name": "input.dotx",
+  "expected": "expected-dotx.dotx",
+  "data": {
+   "user": "John"
+  }
+ },
+ {
+  "name": "input.pptm",
+  "expected": "expected-pptm.pptm",
+  "data": {
+   "user": "John"
+  }
+ },
+ {
+  "name": "table-example.pptx",
+  "expected": "expected-table-example.pptx",
+  "data": {
+   "users": [
+    {
+     "msg": "hello",
+     "name": "mary"
+    },
+    {
+     "msg": "hello",
+     "name": "john"
+    }
+   ]
+  }
+ },
+ {
+  "name": "loop-example.pptx",
+  "expected": "expected-loop-example.pptx",
+  "data": {
+   "users": [
+    {
+     "name": "Doe"
+    },
+    {
+     "name": "John"
+    }
+   ]
+  },
+  "texts": {
+   "ppt/slides/slide1.xml": " Doe  John "
+  }
+ },
+ {
+  "name": "loop-table.pptx",
+  "expected": "expected-loop-table.pptx",
+  "data": {
+   "products": [
+    {
+     "name": "Acme",
+     "price": 10
+    },
+    {
+     "name": "Ecma",
+     "price": 20
+    }
+   ]
+  }
+ },
+ {
+  "name": "loop-table-no-header.pptx",
+  "expected": "expected-empty.pptx",
+  "data": {}
+ },
+ {
+  "name": "regression-dash-loop-in-table-cell.pptx",
+  "expected": "expected-table-3-cells.pptx",
+  "data": {}
+ },
+ {
+  "name": "regression-dash-loop-in-table-cell.pptx",
+  "expected": "expected-table-3-true-cells.pptx",
+  "data": {
+   "cond": [
+    1,
+    2,
+    3
+   ]
+  }
+ },
+ {
+  "name": "a16-row-id.pptx",
+  "expected": "expected-a16-row-id.pptx",
+  "data": {
+   "loop": [
+    1,
+    2,
+    3,
+    4
+   ]
+  }
+ },
+ {
+  "name": "loop-image.docx",
+  "expected": "expected-loop-images.docx",
+  "data": {
+   "loop": [
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  "options": {
+   "fix_doc_pr_ids": true
+  }
+ },
+ {
+  "name": "tag-loop-example.docx",
+  "data": {
+   "nom": "Hipp",
+   "prenom": "Edgar",
+   "telephone": "0652455478",
+   "description": "New Website",
+   "offre": [
+    {
+     "titre": "titre1",
+     "prix": "1260"
+    },
+    {
+     "titre": "titre2",
+     "prix": "2000"
+    },
+    {
+     "titre": "titre3",
+     "prix": "1400",
+     "nom": "Offre"
+    }
+   ]
+  },
+  "texts": {
+   "word/document.xml": "Votre proposition commercialeHippPrix: 1260Titre titre1HippPrix: 2000Titre titre2OffrePrix: 1400Titre titre3HippEdgar"
+  }
+ },
+ {
+  "name": "tag-product-loop.docx",
+  "data": {
+   "products": [
+    {
+     "title": "Microsoft",
+     "name": "DOS",
+     "reference": "Win7",
+     "avantages": [
+      {
+       "title": "Everyone uses it",
+       "proof": [
+        {
+         "reason": "it is quite cheap"
+        },
+        {
+         "reason": "it is quit simple"
+        },
+        {
+         "reason": "it works on a lot of different Hardware"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Linux",
+     "name": "Ubuntu",
+     "reference": "Ubuntu10",
+     "avantages": [
+      {
+       "title": "It's very powerful",
+       "proof": [
+        {
+         "reason": "the terminal is your friend"
+        },
+        {
+         "reason": "Hello world"
+        },
+        {
+         "reason": "it's free"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Apple",
+     "name": "Mac",
+     "reference": "OSX",
+     "avantages": [
+      {
+       "title": "It's very easy",
+       "proof": [
+        {
+         "reason": "you can do a lot just with the mouse"
+        },
+        {
+         "reason": "It's nicely designed"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "texts": {
+   "word/document.xml": "MicrosoftProduct name : DOSProduct reference : Win7Everyone uses itProof that it works nicely : It works because it is quite cheap It works because it is quit simple It works because it works on a lot of different HardwareLinuxProduct name : UbuntuProduct reference : Ubuntu10It's very powerfulProof that it works nicely : It works because the terminal is your friend It works because Hello world It works because it's freeAppleProduct name : MacProduct reference : OSXIt's very easyProof that it works nicely : It works because you can do a lot just with the mouse It works because It's nicely designed"
+  }
+ },
+ {
+  "name": "table-repeat.docx",
+  "data": {
+   "table": [
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  "texts": {
+   "word/document.xml": "1234123412341234"
+  }
+ },
+ {
+  "name": "delimiter-gt.docx",
+  "data": {
+   "user": "John"
+  },
+  "options": {
+   "delimiters": [
+    "<",
+    ">"
+   ]
+  },
+  "texts": {
+   "word/document.xml": "Hello John"
+  }
+ },
+ {
+  "name": "delimiter-pct.docx",
+  "data": {
+   "user": "John",
+   "company": "PCorp"
+  },
+  "options": {
+   "delimiters": [
+    "%",
+    "%"
+   ]
+  },
+  "texts": {
+   "word/document.xml": "Hello John from PCorp"
+  }
+ },
+ {
+  "name": "tag-dash-loop.docx",
+  "data": {
+   "os": [
+    {
+     "type": "linux",
+     "price": "0",
+     "reference": "Ubuntu10"
+    },
+    {
+     "type": "DOS",
+     "price": "500",
+     "reference": "Win7"
+    },
+    {
+     "type": "apple",
+     "price": "1200",
+     "reference": "MACOSX"
+    }
+   ]
+  },
+  "texts": {
+   "word/document.xml": "linux0Ubuntu10DOS500Win7apple1200MACOSX"
+  }
+ },
+ {
+  "name": "tag-dash-loop-table.docx",
+  "data": {
+   "os": [
+    {
+     "type": "linux",
+     "price": "0",
+     "reference": "Ubuntu10"
+    },
+    {
+     "type": "DOS",
+     "price": "500",
+     "reference": "Win7"
+    },
+    {
+     "type": "apple",
+     "price": "1200",
+     "reference": "MACOSX"
+    }
+   ]
+  },
+  "texts": {
+   "word/document.xml": "linux0Ubuntu10DOS500Win7apple1200MACOSX"
+  }
+ },
+ {
+  "name": "tag-dash-loop-list.docx",
+  "data": {
+   "os": [
+    {
+     "type": "linux",
+     "price": "0",
+     "reference": "Ubuntu10"
+    },
+    {
+     "type": "DOS",
+     "price": "500",
+     "reference": "Win7"
+    },
+    {
+     "type": "apple",
+     "price": "1200",
+     "reference": "MACOSX"
+    }
+   ]
+  },
+  "texts": {
+   "word/document.xml": "linux 0 Ubuntu10 DOS 500 Win7 apple 1200 MACOSX "
+  }
+ },
+ {
+  "name": "simple-example.pptx",
+  "data": {
+   "name": "Edgar"
+  },
+  "texts": {
+   "ppt/slides/slide1.xml": "Hello Edgar"
+  }
+ },
+ {
+  "name": "bug-closing-placeholder-orphan.docx",
+  "expected": "expected-bug-closing-placeholder-orphan.docx",
+  "data": {
+   "first_name": "John",
+   "last_name": "Doe"
+  },
+  "options": {
+   "delimiters": [
+    "$(",
+    ")"
+   ],
+   "allow_unopened_tag": true
+  }
+ }
+]
